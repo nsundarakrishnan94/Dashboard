@@ -1,0 +1,207 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap-grid.min.css" integrity="sha512-cKoGpmS4czjv58PNt1YTHxg0wUDlctZyp9KUxQpdbAft+XqnyKvDvcGX0QYCgCohQenOuyGSl8l1f7/+axAqyg==" crossorigin="anonymous" />
+
+    <!--Jquery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.gridster/0.5.6/jquery.gridster.min.css" integrity="sha512-RfPoqYhcoK5PP0OWrPp8Bva1j9VOWyEMYTM5LKoCtaRNl6X373XlnUGxrnFZ1qxNTUCIKk7tnSBZulVs8nfPIg==" crossorigin="anonymous" />
+
+
+<!--FeatherICon-->
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    
+    <section class="sidebar-nav">
+        
+        <div class="navbar-container">
+            <img  alt='logo' class='covidlogo' src='./Assets/logo.png'/>
+
+
+            <ul class='side-nav-menu-items'>
+               
+                    <li class='menu-item active'>
+                        <i class="ri-dashboard-fill"></i>
+                        <a href='#'>Dashboard</a>
+                    </li>
+               
+
+               
+                    <li class='menu-item'>
+                        <i class="ri-alert-fill"></i>
+                        <a href=''>Alert</a>
+                        
+                    </li>
+               
+
+               
+                <li class='menu-item'>
+                    <i class="ri-message-fill"></i>
+                    <a href=''>Message</a>
+                   
+                </li>
+           
+
+              
+               
+                <li class='menu-item'>
+                    <i class="ri-settings-3-fill"></i>
+                    <a href=''>Settings</a>
+                </li>
+           
+            </ul>
+
+            
+        </div>
+
+    </section>
+
+    <i class="feather-more-vertical" style="color: black;" ></i>
+
+
+<section class="dashboard">
+
+    <br><br>
+    <br>
+    <div class="dashboard-main">
+
+
+
+
+
+        <div class="gridster">
+            <h4 style="margin-left: 9px;">Covid-19 Overview</h4>
+            <br> <br> <br> 
+            <ul>
+                <li class='card' data-row="1" data-col="1" data-sizex="2" data-sizey="1"> 
+                    <div class='content-container'>
+                    <h4>Total cases</h4>
+                    <img class='totalcasesgraph' src="./Assets/totalcasesvector.png" alt="">
+                    <h1 id='totalcasescount'>22,33,000</h1>
+                </div>
+                </li>
+
+                <li class='card' data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+               
+                    <h4 class="socialdistancetxt">Maintain Social Distance</h4>
+                    <img class='socialdistance' src="./Assets/6 Feet.png" alt="" width="40%">
+                  
+                </li>
+
+                <li class='card' data-row="3" data-col="1" data-sizex="2" data-sizey="1">
+                    <div class='content-container'></div>
+                </li>
+        
+                <li class='card' data-row="1" data-col="2" data-sizex="2" data-sizey="1">
+                    <div class='content-container'>
+                    <h4>Recovered</h4>
+                    <img class='totalrecoverygraph' src="./Assets/totalrecover.png" alt="">
+                    <h1>1,83,000</h1>
+                </div>
+                </li>
+                
+                <li class='card' data-row="2" data-col="2" data-sizex="3" data-sizey="2">
+                    
+                    <div class="dropdown">
+                        <!-- three dots -->
+                        <ul class="dropbtn icons btn-right showLeft" onclick="showDropdown()">
+                         <!-- <img class='verticalmenu' src="./Assets/menu-vertical1.png" alt="">   -->
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <!-- menu -->
+                        <div id="myDropdown" class="dropdown-content">
+                            <a class="btn btn-success" id='bar'>Bar Chart</a>
+                            <a class='btn btn-info' id='line'>Line Chart</a> 
+                        </div>
+                    </div>
+                        <canvas id='dynamic-chart'></canvas>
+
+                </li>
+        
+                <li class='card' data-row="1" data-col="3" data-sizex="2" data-sizey="1">
+                    <div class='content-container'>
+                    <h4>Deaths cases</h4>
+                    <img class='totalcasesgraph' src="./Assets/totalcasesvector.png" alt="">
+                    <h1>2,42,000</h1>
+                    </div>
+                </li>
+
+                <li class='card' data-row="2" data-col="4" data-sizex="2" data-sizey="1">
+                
+                    <p>Get Doctors advice Now</p>
+                    <img class='doctorsadviceimg' style="display: inline;" src="./Assets/doctorsadvice.png" alt="">
+                    <a href='#' style="color: black; font-size: .6rem; position: absolute; bottom: 20px; right: 10px;">Read More ></a>
+                     
+                </li>
+
+                <!-- <li class='card' data-row="3" data-col="4" data-sizex="1" data-sizey="1"></li> -->
+        
+                <li class='card' data-row="1" data-col="5" data-sizex="1" data-sizey="1">
+                    <h4>Wash Hands</h4>
+                    <img src="./Assets/washhand.png" alt="">
+                </li>
+
+                <li class='card' data-row="3" data-col="5" data-sizex="1" data-sizey="1">
+                    <h4>Wear Mask</h4>
+                    <img src="./Assets/mask.png" alt="">
+                </li>
+        
+                <!-- <li class='card' data-row="1" data-col="6" data-sizex="1" data-sizey="1"></li> -->
+                <li class='card' data-row="2" data-col="6" data-sizex="1" data-sizey="2">
+                    <p style="text-align: center;">Symtoms of Corona</p>
+                    <img class='symtomsimg' src="./Assets/symtoms.png" alt="">
+                    <a href='#' style="font-size: .8rem;">Read More ></a>
+                </li>
+            </ul>
+        </div>
+
+  
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+  <!--Gridster JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.gridster/0.5.6/jquery.gridster.min.js" integrity="sha512-AUvWib6J0eB7b0etrseAF0buv1VmqoATC+T5PqlMDl5xOPTXY2e2GJ1qdOnLa9+THtmVb9ry/s3AnUpTbNz2EA==" crossorigin="anonymous"></script>
+  <!--Chart JS-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+<!--Bootstrap Bundle-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous"></script>
+
+<!-- Count Up number -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.0/countUp.js" integrity="sha512-oKHFEN8NtMRzI0+BvFZLCS2uQN9LxvQc69/mGICoWfjbXEoEbYLCCfxdHZSU0yXmcGVftm21KkoSOn7+XYJT3A==" crossorigin="anonymous"></script>
+    
+    <script src="Script.js"></script>
+</body>
+
+
+
+</html>

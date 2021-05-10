@@ -1,0 +1,446 @@
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+  }
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background: #F5F4F7;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* SideBar nav */
+
+
+
+.sidebar-nav{
+    position: absolute;
+    width: 15%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background: #0F1E59;
+    }
+    
+    .navbar-container{
+       
+        width: 70%;
+        height: 100vh;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    .covidlogo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 30%;
+         margin-bottom: 40px;
+    }
+    
+    
+    ul{
+        position: absolute;
+        list-style: none;
+        top: 35%;
+    }
+    
+    li{
+        color: white;
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+        opacity: 80%;
+    }
+    
+
+    a{
+        text-decoration: none;
+        color: white;
+        margin-left: 10px;
+    }
+
+    li>p{
+        
+        vertical-align: middle;
+        margin-right: 8px;
+        font-size: 14px;
+        font-weight: bolder;
+        display: inline;
+        margin-left: 15px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------Dashboard Section Start-------------------------------------------- */
+
+
+  .dashboard{
+        width: 85vw;
+        background: #F5F4F7;
+        position: absolute;
+        left: 15%;
+        height: 100vh;
+
+    }
+    
+
+.totalcasesgraph{
+    width: 100px;
+    opacity: 70%;
+    display: inline;
+}
+
+.totalrecoverygraph{
+    margin-bottom: 10px;
+    width: 100px;
+    opacity: 70%;
+    display: inline;
+}
+
+.doctorsadviceimg{
+    width: 150px;
+    display: inline;
+}
+
+.symtomsimg{
+    width: 120px;
+    display: inline;
+}
+
+.socialdistance{
+    width: 50%;
+}
+
+.socialdistancetxt{
+    font-size: .9rem !important;
+}
+
+.dashboard-main{
+  padding-left: 4%;
+}
+
+
+
+.card{
+    color: black;
+    text-align: center;
+}
+
+
+.content-container{
+    padding: 20px;
+}
+
+.content-container >h4{
+    font-size: 1rem;
+    font-weight: 400;
+    display: inline;
+}
+.content-container>h1{
+    font-size: 32px;
+}
+
+
+.card >h4{
+    font-size: 1rem;
+    font-weight: 400;
+    display: inline;
+}
+
+
+
+
+        /*-------------------------------------------Gridster JS Start-------------------------------------------- */
+
+
+            .gridster li{
+                padding: 10px;
+                list-style: none;
+                cursor: pointer;
+                background-color: white;
+                box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+                border-radius: 15px;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                -ms-border-radius: 15px;
+                -o-border-radius: 15px;
+            }
+
+
+            li:nth-child(1){
+            
+}
+
+            li:nth-child(2){
+               
+}
+            }
+
+            li:nth-child(3){
+               
+            }
+
+            li:nth-child(4){
+               
+            }
+
+            li:nth-child(5){
+                
+            }
+
+            li:nth-child(6){
+         
+            }
+
+            li:nth-child(7){
+                
+            }
+
+            li:nth-child(8){
+         
+            }
+
+            li:nth-child(9){
+               
+            }
+            li:nth-child(10){
+                background-color: teal;
+            }
+
+            li:nth-child(11){
+           
+            }
+
+            li:nth-child(12){
+           
+            }
+
+
+            .gridster{
+                position: relative;
+            }
+
+            .gridster>*{
+                margin: 0;
+                transform: height .4s,width .4s;
+                -webkit-transform: height .4s,width .4s;
+                -moz-transform: height .4s,width .4s;
+                -ms-transform: height .4s,width .4s;
+                -o-transform: height .4s,width .4s;
+            }
+
+            .gridster .gs-w{
+
+                z-index: 2;
+                position: absolute;
+            }
+            .ready .gs-w:not(.preview-holder){
+                transition: opacity .3s, left .3s, top .3s;
+                -webkit-transition: opacity .3s, left .3s, top .3s;
+                -moz-transition: opacity .3s, left .3s, top .3s;
+                -ms-transition: opacity .3s, left .3s, top .3s;
+                -o-transition: opacity .3s, left .3s, top .3s;
+            }
+
+            .ready .gs-w:not(.preview-holder),
+            .ready .resize-preview-holder{
+                transition: opacity .3s,left .3s, top.3s,height .3s;
+                -webkit-transition: opacity .3s,left .3s, top.3s,height .3s;
+                -moz-transition: opacity .3s,left .3s, top.3s,height .3s;
+                -ms-transition: opacity .3s,left .3s, top.3s,height .3s;
+                -o-transition: opacity .3s,left .3s, top.3s,height .3s;
+            }
+
+
+            .gridster .preview-holder{
+                z-index:1;
+                position: absolute;
+                background-color: white;
+                border-color: white;
+                opacity: .3;
+            }
+
+
+            .gridster .player-revert{
+                z-index: 10 !important;
+                transition: left .3s,top .3 !important;
+                -webkit-transition: left .3s,top .3 !important;
+                -moz-transition: left .3s,top .3 !important;
+                -ms-transition: left .3s,top .3 !important;
+                -o-transition: left .3s,top .3 !important;
+            }
+
+
+            .gridster .dragging, .gridster .resizing{
+                z-index: 10 !important;
+                transition: all 0s !important;
+                -webkit-transition: all 0s !important;
+                -moz-transition: all 0s !important;
+                -ms-transition: all 0s !important;
+                -o-transition: all 0s !important;
+            }
+
+            .gs-resize-handle{
+                position: absolute;
+                z-index: 1;
+            }
+
+            .gs-resize-handle-both{
+                width: 20px;
+                height: 20px;
+                bottom: -8px;
+                right: -8px;
+            }
+
+
+            .gs-resize-handle-x{
+                top:0;
+                bottom: 13px;
+                right: -5px;
+                width: 10px;
+                cursor: e-resize;
+            }
+
+            .gs-resize-handle-y{
+                left: 0;
+                right: 13px;
+                bottom: -5px;
+                height: 10px;
+                cursor: s-resize;
+            }
+
+            .gs-w:hover .gs-resize-handle,
+            .resizing
+            .gs-resize-handle{
+                opacity: 1;
+            }
+
+            .gs-resize-handle,
+            .gs-w.dragging,
+            .gs-resize-handle{
+                opacity: 0;
+            }
+
+
+    /*-------------------------------------------Gridster JS End-------------------------------------------- */
+
+
+
+
+/*-------------------------------------------Dashboard Section Start-------------------------------------------- */
+
+#dynamic-chart{
+    padding: 50px 20px 10px 20px;
+}
+
+
+/* 
+.verticalmenu{
+    position: absolute;
+    right: 0px;
+    top: 3px;
+} */
+
+
+.showLeft{
+    height: 40px;
+    width: 10px !important;
+    /* background-color: #0d77b6 !important; */
+    /* border:1px solid #0d77b6 !important;  */
+    text-shadow: none !important;
+    color:gray !important;
+    padding:10px;
+}
+
+.icons li {
+    background: none repeat scroll 0 0 rgb(170, 170, 170);
+    height: 2px;
+    width: 2px;
+    line-height: 0;
+    list-style: none outside none;
+    margin-right: 5px;
+    margin-bottom: 5px !important;
+    /* margin-top: 2px; */
+    vertical-align: top;
+    border-radius:50%;
+    pointer-events: none;
+}
+
+.btn-left {
+    left: 0.4em;
+}
+
+.btn-right {
+    right: 7em;
+}
+
+.btn-left, .btn-right {
+    position: absolute;
+    top: 0.24em;
+}
+
+.dropbtn {
+    margin-top: 5px;
+    padding: 20px;
+    /* background-color: tomato; */
+    color: gray;
+    font-size: 2px;
+    border: none;
+    cursor: pointer;
+}
+/* 
+.dropbtn:focus {
+   color: gray;
+} */
+
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    right: 2px;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    margin-top: 60px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
